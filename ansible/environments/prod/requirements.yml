@@ -1,2 +1,6 @@
+- src: https://github.com/kornsn/ansible_db
+  version: master
+  name: db
+
 - src: jdauphant.nginx
   version: v2.21.1

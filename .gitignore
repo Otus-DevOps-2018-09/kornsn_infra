@@ -13,3 +13,12 @@ env
 # ansible
 *.retry
 /ansible/roles/jdauphant.nginx
+/ansible/roles/db
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

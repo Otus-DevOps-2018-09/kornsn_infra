@@ -1,3 +1,6 @@
-ansible>=2.4
+ansible==2.7.5
+molecule==2.19.0
+testinfra==1.16.0
+python-vagrant>=0.5.15
 requests
 google-auth

@@ -194,3 +194,20 @@ $ ansible all -m ping -i read_json_inventory.py
 - Использована утилита ansible-vault для шифрования данных пользователей
 - Добавлен плейбук для создания пользователей с использованием зашифрованных ранее данных
 - В окружениях stage и prod используется динамический инвентори
+
+
+
+# Ansible-4 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/kornsn_infra.svg?branch=ansible-4)](https://travis-ci.com/Otus-DevOps-2018-09/kornsn_infra)
+
+Что сделано:
+
+- установлен VirtualBox и Vagrant
+- описана локальная инфрастуктура с помощью Vagrantfile
+- доработаны роли для провижнинга в Vagrant
+- параметризована роль `app`, чтобы иметь возможность выполнять деплой от заданного пользователя
+- задание со * -- дополнена конфигурация Vagrant для корректной работы проксирования приложения с помощью nginx
+- написаны тесты для роли `db` с помощью `molecule`, `testinfra` и Vagrant
+- задание со * -- роль `db` вынесена в отдельный репозиторий `https://github.com/kornsn/ansible_db` и подключена через
+requirements.yml. Также для этого репозитория:
+    - Подключен TravisCI для автоматического прогона тестов в GCE
+    - Настроено оповещение о коммитах и сборках в [slack-чат](https://devops-team-otus.slack.com/messages/CDMRXRXTK/details/)
