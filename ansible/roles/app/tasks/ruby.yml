@@ -1,0 +1,9 @@
+---
+- name: Install ruby
+  package:
+    name:
+      - ruby-full
+      - bundler
+      - build-essential
+    state: present
+  tags: ruby
